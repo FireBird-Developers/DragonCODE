@@ -1,0 +1,50 @@
+import { VerticalBox, GridBox, HorizontalBox, TextEdit, Button, TabWidget, GroupBox} from "std-widgets.slint";
+
+
+export component MainWindow inherits Window{
+    width: 800px;
+    height: 800px;
+    title: "Dragon Code";
+    icon: @image-url("assets/icon.jpeg");
+    
+   GridLayout {
+    width: parent.width;
+    height: parent.height;
+
+        Rectangle {
+            row: 0;
+            border-color: black;
+            border-width: 1px;
+            height: 50px;
+            width: parent.width;
+            colspan: 3;
+        }
+        Rectangle {
+            border-color: black;
+            border-width: 1px;
+            height: parent.width - 50px;
+            width: 50px;
+            row: 1;
+        }
+        Rectangle {
+            col: 1;
+            row: 1;
+            height:  parent.height - 50px;
+            width: parent.width - 50px;
+            TextEdit {
+                height: parent.height;
+                width: parent.width;
+
+            }
+        }
+    
+    
+   
+
+   
+            
+    
+   }
+   
+    
+}
